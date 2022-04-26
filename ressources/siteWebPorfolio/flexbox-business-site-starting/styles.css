@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    max-width: 100%;
+    font-family: Quicksand, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    z-index: 10;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+header #logo{
+    margin: auto 0;
+    margin-left: 1rem;
+}
+
+header #logo img {
+    display: flex;
+    margin: auto;
+    width: 9rem;
+}
+
+header #title {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    color: rgb(67, 67, 67);
+}
+
+
+#menu-navigation{
+    display: flex;
+    align-self: center;
+    /* padding-top: 0.8rem; */
+    margin-right: 0.2rem;
+}
+
+#navigation ul li{
+    display: inline-flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    
+}
+
+#navigation ul li a{
+    display: flex;
+    flex-flow: row wrap;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+}
+
+#menu-navigation #menu-burger, #toggle{
+    display: none;
+}
+
+@media screen and (max-width : 980px){
+    #menu-navigation #menu-visible{
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+    }
+    header {
+        height: 4rem;
+        align-items: flex-start;
+        overflow: visible;
+    }
+    header #logo img{
+        width: 6rem;
+    }
+    #menu-navigation #menu-burger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-width: 2px;
+        margin-right: 1rem;
+        width: 2.3rem;
+        font-size: 2.3rem;
+        font-weight: bold;
+        color:rgb(67, 67, 67);
+    }
+    #menu-burger:hover{
+        border-bottom: 1px solid rgb(207, 207, 207);
+        
+    }
+    #toggle:checked + #menu-visible{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 3.5rem; 
+        margin: 0.5rem;
+    }
+   
+    #navigation ul li a img{
+        display: none;
+    }
+    #navigation ul li:hover{
+        background-color: rgb(156, 156, 156);
+    }
+    #navigation ul li{
+        display: flex;
+        flex-flow: column wrap;
+        list-style-type: none;
+        font-size: 0.9rem;
+        
+    }
+    #menu-navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-right: 0rem;
+    }
+    #navigation ul li a{
+        display: flex;
+        flex-flow: column wrap;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(67, 67, 67);
+    }
+}
+
+
+
+#contact-insta{
+    display: flex;
+    align-items: center;
+}
+
+#logo-instagram{
+    display: flex;
+    padding: 0.5rem;
+    width: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    top: 4rem;
+    user-select: none;
+    background-color: rgb(240, 245, 245);
+}
+
+#header-main{ 
+    display: flex;
+    align-items: center;
+    background-image: url('images/bureau-Buisness.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:30rem;
+    margin-bottom: 4rem;
+}
+
+#presentation{ 
+    font-family: "Source Code Pro";
+    font-size: 1.5rem;
+    margin: auto 15% ;
+    max-width: 60rem;
+    height: auto;
+    font-weight: bold;
+   color: rgb(255, 255, 255);
+}
+
+#presentation p{
+    
+    max-width: 25rem;
+}
+
+#section-result{
+    font-family: "Source Code Pro";
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-height: 60rem;
+    margin-bottom: 4rem;
+}
+
+#result h2{
+    width: 30rem;
+}
+
+#result {
+    width: 25rem;
+    font-size: large;
+}
+
+#image-chart img{
+    margin: auto;
+    width: 25rem;
+    box-shadow: 0 0 2px #000;
+}
+
+#section-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 6rem;
+    padding-top: 5rem;
+    margin-bottom:  4rem;
+    border-top: 1px solid rgb(67, 67, 67);
+    border-bottom: 1px solid rgb(67, 67, 67);
+    background-color: rgb(132, 132, 132);
+}
+
+.best-product{
+    font-family:  "Source Code Pro";
+    text-align: center;
+    max-width: 22rem;
+}
+
+.best-product img{
+    width: 22rem;
+    height: 15rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 2px rgb(67, 67, 67);
+}
+
+#solutions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family:  "Source Code Pro";
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+#solutions h2{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    color:  rgb(67, 67, 67);
+   border-bottom: 2px solid transparent;
+   border-image: linear-gradient(0.25turn, rgb(240, 245, 245), rgb(67, 67, 67));
+   border-image-slice: 1;
+   /* background-color: antiquewhite; */
+}
+
+#solut {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sol{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 15rem;
+    height: 15rem;
+    margin: 4rem 1rem;
+    background-color: rgb(207, 207, 207);;
+    border: 1px solid rgb(67, 67, 67);
+    box-shadow: 1px 1px 1px rgb(67, 67, 67);
+    border-radius: 50%;
+}
+
+
+#company-employees{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: 'Beau Rivage';
+    font-size: 1.5rem;
+}
+
+#company-employees img{
+    width: 15rem;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#team{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 2px solid rgb(67, 67, 67);
+    color:  rgb(67, 67, 67);
+    width: 100%;
+}
+
+#team h2{
+    font-family:  "Source Code Pro";
+    font-weight: bold;
+    text-align: center;
+    color:  rgb(67, 67, 67);
+    margin: auto;
+   border-bottom: 2px solid transparent;
+   border-image: linear-gradient(0.25turn, rgb(240, 245, 245), rgb(67, 67, 67));
+   border-image-slice: 1;
+   /* background-color: antiquewhite; */
+    margin-bottom: 3rem; 
+    margin-top: 4rem;
+}
+
+footer{
+    background-color: rgb(240, 245, 245);
+    position: relative;
+    bottom: -4rem;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: small;
+    padding: 1.3rem;
+    text-align: center;
+    color: rgb(67, 67, 67);
+}
+
+@media screen and (max-width: 505px){
+    html{
+        overflow-x: visible;
+        width: 100%;
+    }
+    main{
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    header #logo{
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        align-items: center;
+        max-width: 100%;
+        overflow: visible;
+    }
+    #menu-navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-left: 0rem;
+    }
+    #toggle:checked + #menu-visible{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 3.5rem; 
+        margin: 0rem;
+    }
+
+    #header-main{ 
+        margin-bottom: 2rem;
+    }
+    #presentation{ 
+        text-align: center;
+        font-size: 2rem;
+        margin: auto 5% ;
+        max-width: 50rem;
+        height: auto;
+        font-weight: bold;
+       color: rgb(255, 255, 255);
+    }
+    
+    #presentation p{
+        max-width: 30rem;
+    }
+
+    #section-result{
+        margin-bottom: 2rem;
+    }
+    
+    #result h2{
+        max-width: 100%;
+    }
+    
+    #result {
+        font-size: large;
+        margin: auto 5%;
+    }
+    #result p{
+        margin-bottom: 2rem;
+    }
+    #image-chart img{
+        margin: auto;
+        width: 95%;
+    }
+    
+    .best-product{
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .best-product img{
+        width: 90%;
+        height: 100%;
+        margin-top: 1rem;
+    }
+
+    #section-products {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        margin-bottom:  2rem;
+    }
+
+    #solutions{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-family:  "Source Code Pro";
+        text-align: center;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .sol{
+
+        width: 25rem;
+        height: 25rem;
+        margin: 2rem 1rem;
+    }
+
+    #company-employees{
+        font-size: 2rem; 
+    }
+    .employee{
+        word-spacing: 1rem;
+    }
+    #company-employees img{
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+
+    #team{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-top: 2px solid rgb(67, 67, 67);
+        color:  rgb(67, 67, 67);
+        width: 100%;
+    }
+
+    #team h2{
+        margin-bottom: 1rem; 
+        margin-top: 2rem;
+    }
+    
+    #contact {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    #logo{
+        display: none;
+    } 
+}

@@ -1,28 +1,53 @@
-const listSite = [
-                    {'#listeCompany': 'miniatureDreamCompany'},
-                    {'#generateurMessage': ''}, 
-                    {'#WebStyle': ''}
-                ];
+const miniatureBestCompagny = document.querySelector('#miniature-realisation-company');
+const miniatureGenerateur = document.querySelector('#miniature-realisation-generateur');
+const miniatureWebStyle = document.querySelector('#miniature-realisation-webstyle');
 
-
-                
 const listeCompany = document.querySelector('#listeCompany');
-const miniatureBestCompagny = document.querySelector('#miniature-realisation');
+const generateurMessage = document.querySelector('#generateurMessage');
+const webStyle = document.querySelector('#webStyle');
 
+const listSite = {
+                    listeCompany: miniatureBestCompagny,
+                    generateurMessage: miniatureGenerateur, 
+                    webStyle: miniatureWebStyle,
+                    miniatureBestCompagny: miniatureBestCompagny,
+                    miniatureGenerateur: miniatureGenerateur,
+                    miniatureWebStyle: miniatureWebStyle
+                };
+
+const listList =[
+                    listeCompany,
+                    generateurMessage,
+                    webStyle,
+                    miniatureBestCompagny,
+                    miniatureGenerateur,
+                    miniatureWebStyle
+                ];
+                    
 const mouseOver = (event) => {
-    
-    console.log('coucou');
-    listeCompany.style.color = 'blue';
-    miniatureBestCompagny.style.display = 'block';
+    const eventTarget = event.target.id;
+    const valueList = listSite[eventTarget];
+    event.target.style.color = 'red';
+    if(valueList != undefined){
+        valueList.style.display = 'block';
+    }
 }
 
-const mouseOutFocus = () => {
-    listeCompany.style.color = 'black';
-    miniatureBestCompagny.style.display = 'none';
+const mouseOutFocus = (event) => {
+    const eventTarget = event.target.id;
+    const valueList = listSite[eventTarget];
+    event.target.style.color = 'black';
+    // console.log(valueList);
+     if(valueList != undefined){
+        valueList.style.display = 'none';
+    }
 }
 
-listeCompany.onmouseover = mouseOver;
-miniatureBestCompagny.onmouseover = mouseOver;
-listeCompany.onmouseout = mouseOutFocus;
-miniatureBestCompagny.onmouseout = mouseOutFocus;
+listList.forEach(element => {
+    // console.log(element);
+    element.onmouseover = mouseOver;
+    element.onmouseout = mouseOutFocus;
+});
+
+
 

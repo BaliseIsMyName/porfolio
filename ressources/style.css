@@ -64,16 +64,16 @@ header nav ul{
 .navigation-lien a{
     text-decoration: none;
     margin: 5px;
-}
-
-
-.navigation-lien a:active{
-   color: red;
-}
-.navigation-lien a:visited{
     color: black;
 }
-.navigation-lien a:hover{
+
+a:active{
+   color: purple;
+}
+a:visited{
+    color: black;
+}
+a:hover{
     color: red;
 }
 
@@ -118,42 +118,75 @@ main aside{
     right: 6rem;
 }
 
-#miniature-realisation{
+#miniature-realisation-company{
+    position: absolute;
+    right: 18rem;
+    /* border: 1px solid black; */
+    display: none;
+}
+#miniature-realisation-generateur{
+    position: absolute;
+    right: 18rem;
+    /* border: 1px solid black; */
+    display: none;
+}
+#miniature-realisation-webstyle{
     position: absolute;
     right: 18rem;
     /* border: 1px solid black; */
     display: none;
 }
 
-/* #realisations{
-  
-} */
-
 #listeCompany{
     display: inline-block;
-    border: 1px solid black;
-    padding-right: 15rem;
+    /* border: 1px solid black; */
+    padding-right: 17rem;
 }
 #generateurMessage{
     display: inline-block;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    padding-right: 9rem;
 }
-#WebStyle{
+#webStyle{
     display: inline-block;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    padding-right: 9rem;
 }
 #realisations-liste ul{
-    display: inline-flex;
+    display: inline-block;
     flex-direction: column;
     flex-wrap: nowrap;
     cursor:pointer;
 }
+/* #ombre{
+    position: absolute;
+    right: 18.5rem;
+    margin-top:0.5rem;
+    min-height: 10rem;
+    background-color: rgba(243, 243, 243, 0.414);
+    max-width: 18rem;
+    min-width:18rem;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    box-shadow:  0px 0px 20px 2px gray;
+} */
 
-#miniatureDreamCompany{
+#miniatureDreamCompany, #miniatureGenerateur, #miniatureWebStyle {
     max-width: 19rem;
     cursor: pointer;
-    box-shadow: 1px 2px 3px 0px gray;
+    box-shadow:  0px 0px 10px 2px gray;
+    border-radius: 0.5rem;
 }
+
+.realisations-lien a{
+    text-decoration: none;
+}
+
+.realisations-lien a:visited{
+    color: black;
+}
+
 
 
 

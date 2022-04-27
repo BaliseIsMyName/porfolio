@@ -6,9 +6,9 @@
 
 body{
     background-color: hwb(0 80% 11%);
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap; */
+    flex-wrap: nowrap;
 }
 
 header{
@@ -118,19 +118,7 @@ main aside{
     right: 6rem;
 }
 
-#miniature-realisation-company{
-    position: absolute;
-    right: 18rem;
-    /* border: 1px solid black; */
-    display: none;
-}
-#miniature-realisation-generateur{
-    position: absolute;
-    right: 18rem;
-    /* border: 1px solid black; */
-    display: none;
-}
-#miniature-realisation-webstyle{
+#miniature-realisation-company, #miniature-realisation-generateur, #miniature-realisation-webstyle {
     position: absolute;
     right: 18rem;
     /* border: 1px solid black; */
@@ -158,19 +146,6 @@ main aside{
     flex-wrap: nowrap;
     cursor:pointer;
 }
-/* #ombre{
-    position: absolute;
-    right: 18.5rem;
-    margin-top:0.5rem;
-    min-height: 10rem;
-    background-color: rgba(243, 243, 243, 0.414);
-    max-width: 18rem;
-    min-width:18rem;
-    cursor: pointer;
-    border: 1px solid gray;
-    border-radius: 0.5rem;
-    box-shadow:  0px 0px 20px 2px gray;
-} */
 
 #miniatureDreamCompany, #miniatureGenerateur, #miniatureWebStyle {
     max-width: 19rem;
@@ -187,18 +162,80 @@ main aside{
     color: black;
 }
 
-
-
-
-/* #bas-de-page{
-    margin: auto;
-    width: 100%;
+hr{
+    margin-top: 5rem;
     max-width: 75rem;
-    border: 1px solid black;
+    min-width: 75rem;
+    margin: 6rem auto 0;
+    height: 1px;
+    background-color: rgba(218, 218, 218, 0.508);
+    border: none;
+}
+
+#contact{
+    font-family: Montserrat;
+    padding: 1rem;
+}
+#contact p{
+    font-family: Montserrat;
+    padding: 0.2rem;
+    line-height: 1.5rem;
+}
+
+#bold{
+    font-weight: 700;
 }
 
 #bas-de-page{
-    left: 2rem;
-    bottom: 1rem;
+    display: flex;
+    justify-self: center;
+    padding-left: 3.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 75rem;
     cursor: pointer;
-} */
+    font-size:0.8rem;
+    font-family: 'Source Code Pro';
+}
+@media screen and (min-width:1150px){
+    #miniature-realisation-company, #miniature-realisation-generateur, #miniature-realisation-webstyle {
+        right: 22rem;
+    }
+}
+
+@media screen and (max-width:1075px){
+    #miniature-realisation-company, #miniature-realisation-generateur, #miniature-realisation-webstyle {
+        right: 13.5rem;
+    }
+    main aside{
+        right: 1.5rem;
+    }
+}
+
+@media screen and (max-width:1010px){
+    #miniature-realisation-company, #miniature-realisation-generateur, #miniature-realisation-webstyle {
+        right: 5rem;
+    }
+    main aside{
+        right: 4.5rem;
+    }
+    main aside img{
+        max-width: 6rem;
+        margin-top: 1.5rem;
+    }
+}
+@media screen and (max-width:875px){
+    #miniature-realisation-company, #miniature-realisation-generateur, #miniature-realisation-webstyle {
+        right: 2rem;
+    }
+    main aside{
+        right: 4.5rem;
+    }
+    main aside img{
+        max-width: 6rem;
+        margin-top: 1.5rem;
+    }
+}
